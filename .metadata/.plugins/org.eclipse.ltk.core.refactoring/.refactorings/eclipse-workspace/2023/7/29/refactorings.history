@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;tv-show-mr-robot-wallpaper-2560x1600_7.jpg&apos; to &apos;image&apos;&#x0A;- Original project: &apos;eclipse-workspace&apos;&#x0A;- Destination element: &apos;image&apos;&#x0A;- Original element: &apos;tv-show-mr-robot-wallpaper-2560x1600_7.jpg&apos;" description="Copy file" element1="webtestdemo/src/main/webapp/image/tv-show-mr-robot-wallpaper-2560x1600_7.jpg" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1689764357201" target="/webtestdem/src/main/webapp/image" units="0" version="1.0"/>
+</session>

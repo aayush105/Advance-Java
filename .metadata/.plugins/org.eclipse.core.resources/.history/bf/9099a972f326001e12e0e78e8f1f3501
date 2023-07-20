@@ -1,0 +1,47 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Patient</title>
+</head>
+<body>
+
+<h1>Doctor Form</h1>
+<hr>
+<form action="DoctorServlet" method="POST">
+
+First Name <input type ="text" name ="fname"><br><br>
+Last Name <input type ="text" name ="lname"><br><br>
+Mobile <input type ="text" name ="mobile"><br><br>
+Gender <input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+<br><br>
+DOB <input type ="date" name ="date"> <br><br>
+Marial Status <input type="radio" name="status" value="M"> M
+<input type="radio" name="status" value="U"> U 
+<input type="radio" name="status" value="D"> D
+<input type="radio" name="status" value="LS"> LS
+<br><br>
+Present Address <input type ="text" name ="paddress"><br><br>
+Community Address <input type ="text" name ="caddress"><br><br>
+Past Medical History
+<br>
+<input type="checkbox" name="check-1" value="check-1"> Anemia
+<input type="checkbox" name="check-2" value="check-2"> Asthma
+<input type="checkbox" name="check-3" value="check-3"> Diabetes
+<input type="checkbox" name="check-4" value="check-4"> Cancer
+<br>
+<input type="checkbox" name="check-5" value="check-5"> Ulcer
+<input type="checkbox" name="check-6" value="check-6"> Chickenpox
+<input type="checkbox" name="check-7" value="check-7"> other <input type="text" name="other" >
+<br><br>
+Other Details <textarea rows = "5" cols = "50" name = "note" placeholder ="Enter note here...."></textarea><br><br>   
+Photo <input type="file" name="photo"><br><br>
+  <input type="submit" value="Register" ><br><br>
+<a href ="index.jsp">Back</a>
+</form>
+
+</body>
+</html>
