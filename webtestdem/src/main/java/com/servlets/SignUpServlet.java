@@ -1,4 +1,4 @@
-package com.servlets;
+   package com.servlets;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -6,6 +6,10 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+import com.model.User;
+import com.service.UserService;
+import com.service.UserServiceImpl;
 
 /**
  * Servlet implementation class SignUpServlet
@@ -37,16 +41,30 @@ public class SignUpServlet extends HttpServlet {
 		String ln = request.getParameter("lname");
 		String un = request.getParameter("username");
 		String psw = request.getParameter("password");
-		String phone = request.getParameter("phone");
-		String address = request.getParameter("address");
+//		agi 
 		
-		request.setAttribute("fname", fn);
-		request.setAttribute("lname", ln);
-		request.setAttribute("username", un);
-		request.setAttribute("password", psw);
-		request.setAttribute("phone", phone);
-		request.setAttribute("address", address);
-		request.getRequestDispatcher("signinfo.jsp").forward(request, response);
+//		request.setAttribute("fname", fn);
+//		request.setAttribute("lname", ln);
+//		request.setAttribute("username", un);
+//		request.setAttribute("password", psw);
+//		request.setAttribute("phone", phone);
+//		request.setAttribute("address", address);
+//		request.getRequestDispatcher("signinfo.jsp").forward(request, response);
+	
+	// save user data in db 
+		User u = new User();
+		u.setFname(fn);
+		u.setLname(ln);
+		u.setUsername(un);
+		u.setPassowrd(psw);
+		
+		UserService us = new UserServiceImpl();
+		us.signup(u);
+		
+		request.getRequestDispatcher("login.jsp").forward(request, response);
+	
 	}
+	
+	
 
 }

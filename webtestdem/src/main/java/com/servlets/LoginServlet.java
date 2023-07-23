@@ -7,6 +7,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import com.service.UserService;
+import com.service.UserServiceImpl;
+
 /**
  * Servlet implementation class LoginServlet
  */
@@ -36,7 +39,10 @@ public class LoginServlet extends HttpServlet {
 		String un = request.getParameter("username");
 		String psw = request.getParameter("password");
 		
-		if(un.equals("ram") && psw.equals("123")) {
+		UserService us = new UserServiceImpl();
+		
+		
+		if(us.login(un, psw)) {
 			request.setAttribute("uname", un);
 			request.getRequestDispatcher("home.jsp").forward(request, response);
 		}else {
