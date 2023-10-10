@@ -9,7 +9,7 @@ public class DB {
 		
 		 try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			return DriverManager.getConnection("jdbc:mysql://localhost:3306/<Databse name>","<username>","<password>");
+			return DriverManager.getConnection("jdbc:mysql://localhost:3306/userdb","root","Aayush_105");
 		} catch (Exception e) {
 			
 			e.printStackTrace();
