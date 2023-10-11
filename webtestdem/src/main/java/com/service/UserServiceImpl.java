@@ -14,7 +14,7 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public void signup(User user) {
 		
-		String sql = "INSERT INTO user (fname,lname,username,passowrd) VALUES ('"+user.getFname()+"','"+user.getLname()+"','"+user.getUsername()+"','"+user.getPassowrd()+"')";
+		String sql = "INSERT INTO user (fisrtname,lastname,username,passowrd) VALUES ('"+user.getFname()+"','"+user.getLname()+"','"+user.getUsername()+"','"+user.getPassowrd()+"')";
 		
 		try {
 			Statement stm = DB.getConnection().createStatement();
@@ -63,7 +63,7 @@ public class UserServiceImpl implements UserService{
 				
 				// db_row mapping to object
 				User u = new User();
-				u.setId(rs.getInt("id"));
+				//u.setId(rs.getInt("id"));
 				u.setFname(rs.getString("firstname"));
 				u.setLname(rs.getString("lastname"));
 				u.setUsername(rs.getString("username"));
